@@ -1,1 +1,2 @@
-<button *ngIf="!value">{{value}}</button>
+<button *ngIf="value === 'X'" nbButton hero status="success">{{value}}</button>
+<button *ngIf="value === 'O'" nbButton hero status="info">{{value}}</button>
