@@ -27,13 +27,14 @@ export class BoardComponent implements OnInit {
     return this.xIsNext ? 'X' : 'O';
   }
 
-  makeMove(idx: number) {
+  makeMove(idx: number, event) {
     if (!this.squares[idx] && !this.winner) {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
-    console.log(this.squares);
     this.winner = this.calculateWinner();
+    event.preventDefault();
+    event.stopPropagation();
   }
 
   calculateWinner(): string {
