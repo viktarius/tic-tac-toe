@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "tictactoe-fdf50": {
+      "hosting": {
+        "tic-tac-toe": [
+          "tictactoe-fdf50"
+        ]
+      }
+    }
+  }
+}
