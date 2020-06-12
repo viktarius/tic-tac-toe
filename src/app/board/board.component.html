@@ -3,9 +3,14 @@
 <button nbButton outline status="danger" (click)="newGame()">Start new game</button>
 
 <main>
-  <square
-    *ngFor="let val of squares; let i = index"
-    [value]="val"
-    (click)="makeMove(i, $event)"
-  ></square>
+  <div class="container" *ngFor="let val of squares; let i = index">
+    <div class="dump">
+    </div>
+    <square
+      [value]="val"
+      [style.height]=""
+      (click)="makeMove(i, $event)"
+    ></square>
+  </div>
+
 </main>
