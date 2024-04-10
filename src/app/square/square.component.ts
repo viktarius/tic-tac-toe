@@ -1,11 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { Player } from '../core/core.interfaces';
 
 @Component({
   selector: 'square',
   templateUrl: './square.component.html',
-  styleUrls: ['./square.component.scss']
+  styleUrls: ['./square.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SquareComponent {
-  @Input()
-  value: 'X' | 'O';
+  @Input() public value: Player;
 }
